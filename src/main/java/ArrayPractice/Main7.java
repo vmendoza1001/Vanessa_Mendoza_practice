@@ -1,6 +1,6 @@
-/*package ArrayPractice;
+package ArrayPractice;
 
-public class Main7 {
+/*public class Main7 {
     Write a program where you create an array of 5 elements. Loop through the
 array and print the value of each element, except for the middle (index 2)
 element.
