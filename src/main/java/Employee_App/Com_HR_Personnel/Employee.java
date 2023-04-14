@@ -3,8 +3,8 @@ package Employee_App.Com_HR_Personnel;
 import java.time.LocalDate;
 
 
-public class Employee {
-    private String employeeName;
+public abstract class Employee {
+    private String name;
     private LocalDate hireDate;
     private String position;
 
@@ -12,26 +12,27 @@ public class Employee {
 
     }
 
-    public Employee(String employeeName, LocalDate hireDate, String position) {
-        this.employeeName = employeeName;
+    public Employee(String name, LocalDate hireDate, String position) {
+        this.name = name;
         this.hireDate = hireDate;
         this.position = position;
     }
 
-    public String getEmployeeInfo() {
-        return
+    public abstract String getEmployeeInfo();
 
-                "Employee Name: " + this.employeeName + "\n" +
-                        "Date Hired: " + this.hireDate + "\n" +
-                        "Position: " + this.position + "\n";
+
+    public abstract double computeMonthlyCompensation();
+
+    public String getName() {
+        return name;
     }
 
-    public double computeMonthlyCompensation() {
-        return 0.0;
+    public String getPosition() {
+        return position;
     }
 
-    public void setEmployeeName(String employeeName) {
-        this.employeeName = employeeName;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public LocalDate getHireDate() {
@@ -46,11 +47,11 @@ public class Employee {
         this.position = position;
     }
 
-    public int getNumberOfYearsWorkedSinceHired() {
-        int result = 0;
+    public int computeNumberOfYearsWorkedSinceHired() {
+        int years = 0;
         int currentYear = LocalDate.now().getYear();
-        result = (currentYear - this.hireDate.getYear());
-        return result;
+        years = (currentYear - this.hireDate.getYear());
+        return years;
 
     }
 }
@@ -63,6 +64,14 @@ class SalariedEmployee extends Employee {
         super(employeeName, hireDate, position);
         this.monthlySalary = monthlySalary;
     }
+
+
+    public String getEmployeeInfo() {
+        return super.getName() + "Employee Name: " + "\n" + super.getHireDate() + "Date Hired: " + "\n" + super.getPosition() + "\n" +
+                getMonthlySalary() + "\n";
+
+    }
+
     @Override
     public double computeMonthlyCompensation() {
         return monthlySalary;
@@ -76,7 +85,7 @@ class SalariedEmployee extends Employee {
     }
 }
 
-class HourlyEmployee extends Employee {
+ class HourlyEmployee extends Employee {
     int hoursWorkedPerMonth;
     double hourlyRate;
 
@@ -90,7 +99,10 @@ class HourlyEmployee extends Employee {
         this.hourlyRate = hourlyRate;
 
     }
-
+    public String getEmployeeInfo () {
+        return super.getName() + "Employee Name: " + "\n" + super.getHireDate() + "Date Hired: " + "\n" +
+                super.getPosition() + "\n" + hourlyRate + hoursWorkedPerMonth + "\n";
+    }
     public double computeMonthlyCompensation () {
         return hourlyRate * hoursWorkedPerMonth;
     }

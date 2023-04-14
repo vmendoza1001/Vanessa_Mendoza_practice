@@ -20,14 +20,14 @@ public class HRClient {
         employee3.getEmployeeInfo();
 
 
-        String employeeInfo = employee1.getEmployeeInfo() + employee1.getNumberOfYearsWorkedSinceHired() + "\n" + employee1.computeMonthlyCompensation();
+        String employeeInfo = employee1.getEmployeeInfo() + employee1.computeNumberOfYearsWorkedSinceHired() + "\n" + employee1.computeMonthlyCompensation();
         System.out.println(employeeInfo + "\n");
 
 
-        employeeInfo = employee2.getEmployeeInfo() + employee2.getNumberOfYearsWorkedSinceHired() + "\n" + employee2.computeMonthlyCompensation();
+        employeeInfo = employee2.getEmployeeInfo() + employee2.computeNumberOfYearsWorkedSinceHired() + "\n" + employee2.computeMonthlyCompensation();
         System.out.println(employeeInfo + "\n");
 
-        employeeInfo = employee3.getEmployeeInfo() + employee3.getNumberOfYearsWorkedSinceHired() + "\n" + employee3.computeMonthlyCompensation() + "\n";
+        employeeInfo = employee3.getEmployeeInfo() + employee3.computeNumberOfYearsWorkedSinceHired() + "\n" + employee3.computeMonthlyCompensation() + "\n";
         System.out.println(employeeInfo);
 
         int departmentInfo = department.letEmployeesWorkAndReturnNumberOfEmployeesWhoWorked();
