@@ -67,8 +67,8 @@ class SalariedEmployee extends Employee {
 
 
     public String getEmployeeInfo() {
-        return super.getName() + "Employee Name: " + "\n" + super.getHireDate() + "Date Hired: " + "\n" + super.getPosition() + "\n" +
-                getMonthlySalary() + "\n";
+        return "Employee Name: " + super.getName() + "\n" + "Date Hired: " + super.getHireDate() + "\n" + "Position: " + super.getPosition() + "\n" +
+                "Monthly Salary " + getMonthlySalary() + "\n";
 
     }
 
@@ -100,7 +100,7 @@ class SalariedEmployee extends Employee {
 
     }
     public String getEmployeeInfo () {
-        return super.getName() + "Employee Name: " + "\n" + super.getHireDate() + "Date Hired: " + "\n" +
+        return "Employee Name: " + super.getName() + "\n" + "Date Hired: " + super.getHireDate() + "\n" + "Position: " +
                 super.getPosition() + "\n" + hourlyRate + hoursWorkedPerMonth + "\n";
     }
     public double computeMonthlyCompensation () {
