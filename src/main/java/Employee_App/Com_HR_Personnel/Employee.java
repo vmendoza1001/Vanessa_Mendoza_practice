@@ -2,7 +2,7 @@ package Employee_App.Com_HR_Personnel;
 
 import java.time.LocalDate;
 
-
+//Refactor “employee_app”  that current uses Array to use ArrayList collection object
 public abstract class Employee {
     private String name;
     private LocalDate hireDate;
@@ -22,6 +22,10 @@ public abstract class Employee {
 
 
     public abstract double computeMonthlyCompensation();
+
+    public String worked() {
+        return "worked";
+    }
 
     public String getName() {
         return name;
@@ -65,10 +69,10 @@ class SalariedEmployee extends Employee {
         this.monthlySalary = monthlySalary;
     }
 
-
+    @Override
     public String getEmployeeInfo() {
         return "Employee Name: " + super.getName() + "\n" + "Date Hired: " + super.getHireDate() + "\n" + "Position: " + super.getPosition() + "\n" +
-                "Monthly Salary " + getMonthlySalary() + "\n";
+                "Monthly Salary: " + getMonthlySalary() + "\n";
 
     }
 
@@ -99,10 +103,12 @@ class SalariedEmployee extends Employee {
         this.hourlyRate = hourlyRate;
 
     }
+    @Override
     public String getEmployeeInfo () {
         return "Employee Name: " + super.getName() + "\n" + "Date Hired: " + super.getHireDate() + "\n" + "Position: " +
                 super.getPosition() + "\n" + hourlyRate + hoursWorkedPerMonth + "\n";
     }
+    @Override
     public double computeMonthlyCompensation () {
         return hourlyRate * hoursWorkedPerMonth;
     }

@@ -1,9 +1,13 @@
 package Employee_App.Com_HR_Personnel;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Department {
     String name;
     String location;
-    Employee[] employees = new Employee[100];
+    //[] employees = new Employee[100];
+    private List<Employee> employees = new ArrayList<Employee>();
     int currentIndex = 0;
 
     public Department(String name, String location) {
@@ -12,17 +16,19 @@ public class Department {
     }
 
     public void addEmployee(Employee employee) {
-        this.employees[currentIndex++] = employee;
+        //this.employees[currentIndex++] = employee;
+        this.employees.add(employee);
 
     }
     public int letEmployeesWorkAndReturnNumberOfEmployeesWhoWorked () {
         int numberOfEmployees = 0;
-        for (int i = 0; i < employees.length; i++) {
-            if (employees[i] != null) {
+        for (int i = 0; i < employees.size(); i++) {
+            if (employees.get(i).worked().contains("worked")) {
                 numberOfEmployees++;
             }
         }
         return numberOfEmployees;
+
     }
 
     public double computeDepartmentMonthlyTotalCompensation () {
