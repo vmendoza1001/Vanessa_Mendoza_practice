@@ -16,5 +16,8 @@ weekly 1-1.
   now using ArrayList 
 - "sba_exercise" has some package compiler error
 
+## April 18 (Tuesday morning)
+- "sba_exercise" has some compiler error due to
+  an issue on a MySystem constructor
     
 
