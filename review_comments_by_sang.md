@@ -8,5 +8,16 @@ weekly 1-1.
 - "employee-app"
   - part #1 is done
   - part #2 and after are missing
+
+## April 17 (Monday morning)
+- "employee_app" done until part #5
+- Usage of enhanced for-loop in the Department
+  class would have been nicer since we are
+  now using ArrayList 
+- "sba_exercise" has some package compiler error
+
+## April 18 (Tuesday morning)
+- "sba_exercise" has some compiler error due to
+  an issue on a MySystem constructor
     
 
