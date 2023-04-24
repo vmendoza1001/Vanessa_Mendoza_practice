@@ -20,4 +20,16 @@ weekly 1-1.
 - "sba_exercise" has some compiler error due to
   an issue on a MySystem constructor
     
+  
+## April 24th
+
+- "SBA_Core_Java/Exercise1" 
+  - convertStringArrayIntoArrayList(..) should have returned ArrayList object
+  - createANewArrayListFromExistingArray(..) method implemented incorrectly
+  - main method does not call these methods for testings
+
+- "SBA_Core_Java/Exercise2"
+  - It is done correctly
+  
+- You have a compiler error in "SBA_Exercises/MySystem" class
 
