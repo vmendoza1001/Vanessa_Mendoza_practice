@@ -1,0 +1,51 @@
+package SBARetakeExam.Exercise2;
+
+import java.util.Scanner;
+
+// <<<<<======== Click here to expand the locked stub. Please take a look at the locked stub code to better understand how your implementation of the required classes will be validated.
+//PlEASE DO NOT ATTEMPT TO MODIFY THE CODE BELOW !!!!!!.
+public class Solution{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+
+        Cricket c = new Cricket();
+        Football f = new Football();
+
+        int[] age1 = new int[11];
+        int[] age2 = new int[11];
+
+        for(int i = 0; i < 2; i++)
+        {
+            String[] age = sc.nextLine().split(" ");
+            if(i == 0){
+                int j = 0;
+                for(String s : age)
+                    age1[j++] = Integer.parseInt(s);
+            }
+            else{
+                int j = 0;
+                for(String s : age)
+                    age2[j++] = Integer.parseInt(s);
+            }
+        }
+        c.calculateAvgAge(age1);
+        f.calculateAvgAge(age2);
+
+        for(int i = 0; i < 6; i++){
+
+            if(i < 3){
+                int x = Integer.parseInt(sc.nextLine());
+
+                c.retirePlayer(x);
+            }
+            else if(i < 5){
+                int x = Integer.parseInt(sc.nextLine());
+                f.retirePlayer(x);
+            }
+            else {
+                String[] temp = sc.nextLine().split(" ");
+                f.playerTransfer(Integer.parseInt(temp[0]), Integer.parseInt(temp[1]));
+            }
+        }
+    }
+}
