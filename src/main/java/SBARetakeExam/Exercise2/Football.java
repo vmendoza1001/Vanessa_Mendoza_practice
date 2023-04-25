@@ -34,6 +34,7 @@ class Football implements Sport{
             playerIDs[index] = -1;
             String x = "Player with id: " + id + " has retired";
             System.out.println(x);
+            }
         }
         public void playerTransfer(int fee, int id) {
             int index = id - 1;
@@ -45,4 +46,4 @@ class Football implements Sport{
             }
         }
     }
-}
+
