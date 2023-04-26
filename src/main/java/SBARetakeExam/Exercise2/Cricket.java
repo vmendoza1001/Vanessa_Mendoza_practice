@@ -1,11 +1,11 @@
 package SBARetakeExam.Exercise2;
 
-class Cricket implements Sport{
+class Cricket implements Sport {
 
     private int[] playerIDs;
 
     public Cricket() {
-        playerIDs = new int [11];
+        playerIDs = new int[11];
         for (int i = 0; i < 11; i++) {
             playerIDs[i] = i + 1;
         }
@@ -29,8 +29,7 @@ class Cricket implements Sport{
         if (playerIDs[index] == -1) {
             String x = "Player has already retired";
             System.out.println(x);
-        }
-        else {
+        } else {
             playerIDs[index] = -1;
             String x = "Player with id: " + id + " has retired";
             System.out.println(x);

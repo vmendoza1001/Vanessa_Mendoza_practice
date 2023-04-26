@@ -1,11 +1,6 @@
 package SBARetakeExam.Exercise1;
 
-import java.util.ArrayList;
-import java.util.Random;
-import java.util.Scanner;
-
-
-    //// <<<<<======== Click here to expand the locked stub code
+//// <<<<<======== Click here to expand the locked stub code
 
     /*
 This is here only for visibility. Please do not take the code below out of the comments.
@@ -24,12 +19,12 @@ This is here only for visibility. Please do not take the code above out of the c
 
 //Write your implementation of the InvalidStringException and the ArrayToList classes below
 
-    class InvalidStringException extends Exception {
-        public InvalidStringException(String message) {
-            super(message);
-        }
-
-
+class InvalidStringException extends Exception {
+    public InvalidStringException(String message) {
+        super(message);
     }
+
+
+}
 
 
